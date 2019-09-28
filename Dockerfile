@@ -1,4 +1,4 @@
-
+FROM alpine
 RUN apk update && apk add rspamd rspamd-fuzzy rspamd-proxy
 RUN echo 'type = "console";' > /etc/rspamd/override.d/logging.inc \
 	&& echo 'bind_socket = "*:11334";' > /etc/rspamd/override.d/worker-controller.inc \
